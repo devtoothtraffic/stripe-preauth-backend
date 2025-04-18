@@ -23,10 +23,10 @@ app.post("/create-intent", async (req, res) => {
       metadata: { name, email },
     });
 
-    // Send email
+    // Send confirmation email
     const msg = {
       to: email,
-      from: "confirm@secureyourconsult.com",
+      from: "consults@toothtraffic.com", // ✅ updated sender email
       subject: "Your Consultation Has Been Reserved",
       html: `
         <h2>Hi ${name},</h2>
